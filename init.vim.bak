@@ -7,6 +7,10 @@ Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+Plug 'mattkubej/jest.nvim'
+Plug 'voldikss/vim-floaterm'
+
 
 call plug#end()
 
@@ -15,6 +19,7 @@ set number
 set relativenumber
 set smarttab
 set nowrap
+set autochdir "define o diretório atual como contexto
 let mapleader = '\<Space>'
 
 
@@ -30,6 +35,9 @@ vnoremap <c-s> <Esc>:w<cr>
 inoremap <c-s> <Esc>:w<cr>
 nnoremap <c-s> <Esc>:w<cr>  
 
+" nerdtree
+nnoremap <space>e <Esc>:NERDTreeToggle<cr>
+nnoremap <space>' <Esc>:FloatermToggle<cr>
 
 " Fechando o vim
 
@@ -45,3 +53,5 @@ function! RenameVar()
 endfunction
 
 nnoremap <F2> <Esc>:call RenameVar()<cr>
+
+
