@@ -6,6 +6,7 @@ Plug 'img-paste-devs/img-paste.vim'
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -13,7 +14,8 @@ call plug#end()
 set number
 set relativenumber
 set smarttab
-
+set nowrap
+let mapleader = '\<Space>'
 
 
 " Configurações dos plugins 
@@ -27,3 +29,19 @@ let g:airline_powerline_fonts = 1
 vnoremap <c-s> <Esc>:w<cr>
 inoremap <c-s> <Esc>:w<cr>
 nnoremap <c-s> <Esc>:w<cr>  
+
+
+" Fechando o vim
+
+nnoremap <leader>q <Esc>:q<cr>
+nnoremap <leader>b <Esc>:buffers<cr>
+
+
+" Function to rename the variable under the cursor
+function! RenameVar()
+  let word_to_replace = expand("<cword>")
+  let replacement = input("Novo nome: ")
+  execute '%s/\(\W\)' . word_to_replace . '\(\W\)/\1' . replacement . '\2/gc'
+endfunction
+
+nnoremap <F2> <Esc>:call RenameVar()<cr>
