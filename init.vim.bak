@@ -1,15 +1,15 @@
 call plug#begin()
 
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'img-paste-devs/img-paste.vim'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+"Plug 'img-paste-devs/img-paste.vim'
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
-Plug 'mattkubej/jest.nvim'
-Plug 'voldikss/vim-floaterm'
+"Plug 'mattkubej/jest.nvim'
+"Plug 'voldikss/vim-floaterm'
 
 
 call plug#end()
