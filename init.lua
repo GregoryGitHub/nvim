@@ -15,7 +15,6 @@ vim.call('plug#begin')
 	Plug('hrsh7th/cmp-cmdline')
 	Plug('hrsh7th/nvim-cmp')
 	Plug('onsails/lspkind.nvim')
-	Plug('OmniSharp/omnisharp-vim')	
 vim.call('plug#end')
 
 
