@@ -12,5 +12,6 @@ return {
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.pack.cs" },
 	{ import = "astrocommunity.test.neotest" },
+	{ import = "astrocommunity.pack.typescript" },
 	-- import/override with your plugins folder
 }

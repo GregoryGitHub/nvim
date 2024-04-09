@@ -1,7 +1,3 @@
-if true then
-	return {}
-end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -9,6 +5,14 @@ end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
 
 	-- == Examples of Adding Plugins ==
+
+	"AstroNvim/astrolsp",
+	optional = true,
+	opts = {
+		autocmds = {
+			eslint_fix_on_save = false,
+		},
+	},
 
 	"andweeb/presence.nvim",
 	{
@@ -85,8 +89,5 @@ return {
 				Rule("a", "a", "-vim")
 			)
 		end,
-	},
-	{
-		"Issafalcon/neotest-dotnet",
 	},
 }
