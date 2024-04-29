@@ -22,6 +22,12 @@ return {
 				args = { "--interpreter=vscode" },
 			}
 
+			dap.adapters.netcoredbg = {
+				type = "executable",
+				command = "netcoredbg",
+				args = { "--interpreter=vscode" },
+			}
+
 			-- dap.configurations.cs = extVscode.load_launchjs("${workspaceFolder}/.vscode/launch.json")
 
 			-- 	dap.configurations.cs = {
@@ -49,20 +55,20 @@ return {
 				-- dap_configurations accepts a list of tables where each entry
 				-- represents a dap configuration. For more details do:
 				-- :help dap-configuration
-				dap_configurations = {
-					{
-						-- Must be "coreclr" or it will be ignored by the plugin
-						type = "coreclr",
-						name = "Attach remote",
-						mode = "remote",
-						request = "attach",
-					},
-				},
-				netcoredbg = {
-					-- the path to the executable netcoredbg which will be used for debugging.
-					-- by default, this is the "netcoredbg" executable on your PATH.
-					path = "netcoredbg",
-				},
+
+				-- 	{
+				-- 		-- Must be "coreclr" or it will be ignored by the plugin
+				-- 		type = "coreclr",
+				-- 		name = "Attach remote",
+				-- 		mode = "remote",
+				-- 		request = "attach",
+				-- 	},
+				-- },
+				-- netcoredbg = {
+				-- 	-- the path to the executable netcoredbg which will be used for debugging.
+				-- 	-- by default, this is the "netcoredbg" executable on your PATH.
+				-- 	path = "netcoredbg",
+				-- },
 			})
 		end,
 	},
